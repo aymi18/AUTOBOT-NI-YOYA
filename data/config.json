@@ -1,9 +1,9 @@
 [
   {
     "masterKey": {
-      "admin": [100085861488156],
-      "devMode": false,
-      "database": false,
+      "admin": [100095262681590],
+      "devMode": true,
+      "database": true,
       "restartTime": 999999999999
     },
     "fcaOption": {
