@@ -8,7 +8,7 @@ module.exports.config = {
 	hasPermision: 0,
 	credits: "MAHI", //don’t change credits please
 	description: "Image Enhancer",
-	usePrefix: false,
+	usePrefix: true,
 	usages: "Reply to a photo to enhance image",
 	cooldown: 3,
 };
