@@ -1,6 +1,6 @@
 body {
      padding: 20px;
-     background-image: url("https://i.imgur.com/wBUUsu2.gif");
+     background-image: linear-gradient(45deg, #FBADC1 0%,  #FBADC1 46%,  #FBADC1 100%);
 	   background-size: auto auto;
      font-family: 'Poppins', sans-serif;
 }
