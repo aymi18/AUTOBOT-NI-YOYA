@@ -35,15 +35,7 @@ module.exports.run = function ({ api, event, prefix, admin }) {
 
         // Send voice message with additional information
         const voiceFile = fs.readFileSync(__dirname + "/cache/prefix.gif");
-        api.sendMessage(
-                {
-                        attachment: voiceFile,
-                        type: "audio",
-                        body: "Hey, listen to my prefix information!",
-                },
-                threadID,
-                () => {}
-        );
+        
 
         // Set reaction to the message
         api.setMessageReaction("🔰", messageID, (err) => {}, true);
