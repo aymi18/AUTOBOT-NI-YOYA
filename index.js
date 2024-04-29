@@ -544,7 +544,7 @@ async function accountLogin(state, enableCommands = [], prefix, admin = []) {
 
 													file.on('finish', () => {
 														file.close(() => {
-															api.sendMessage({ body: `𝖠𝗎𝗍𝗈 𝖣𝗈𝗐𝗇 𝖸𝗈𝗎𝖳𝗎𝖻𝖾 \n\nᴠɪɴᴄᴇɴᴛ ᴍᴀɢᴛᴏʟɪꜱ ᴀɪ`, attachment: fs.createReadStream(filePath) }, event.threadID, () => fs.unlinkSync(filePath));
+															api.sendMessage({ body: `𝖠𝗎𝗍𝗈 𝖣𝗈𝗐𝗇 𝖸𝗈𝗎𝖳𝗎𝖻𝖾 \n\n𝗔𝗜 | 𝗔𝗨𝗧𝗢𝗕𝗢𝗧`, attachment: fs.createReadStream(filePath) }, event.threadID, () => fs.unlinkSync(filePath));
 														});
 													});
 												})
