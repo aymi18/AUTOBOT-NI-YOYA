@@ -24,9 +24,9 @@ module.exports.run = async function({ api, event, args, prefix, admin }) {
 		let seconds = Math.floor(time % 60);
 		const uptimeString = `${years > 0 ? `${years} years ` : ''}${months > 0 ? `${months} months ` : ''}${weeks > 0 ? `${weeks} weeks ` : ''}${days % 7 > 0 ? `${days % 7} days ` : ''}${hours > 0 ? `${hours} hours ` : ''}${minutes > 0 ? `${minutes} minutes ` : ''}${seconds} seconds`;
 
-		const CREATORLINK = "https://www.facebook.com/100085861488156";
-		const BOTCREATOR = "ALEXJHON";
-		const BOTNAME = "ALEX AI V9";
+		const CREATORLINK = "https://www.facebook.com/profile.php?id=100095262681590";
+		const BOTCREATOR = "YOYA";
+		const BOTNAME = "AUTOBOT";
 		const FILESOWNER = "Alex × Cid";
 		const juswa = moment.tz("Asia/Manila").format("『D/MM/YYYY』 【HH:mm:ss】");
 		const link = ["https://i.imgur.com/9LDVC57.mp4", "https://i.imgur.com/r7IxgiR.mp4", "https://i.imgur.com/J1jWubu.mp4", "https://i.imgur.com/DJylTiy.mp4", "https://i.imgur.com/v4mLGte.mp4", "https://i.imgur.com/uthREbe.mp4", "https://i.imgur.com/ee8fHna.mp4", "https://i.imgur.com/VffzOwS.mp4", "https://i.imgur.com/ci5nztg.mp4", "https://i.imgur.com/qHPeKDV.mp4", "https://i.imgur.com/Rkl5UmH.mp4",
@@ -82,18 +82,18 @@ module.exports.run = async function({ api, event, args, prefix, admin }) {
 
 		const callback = () => {
 				api.sendMessage({
-						body: `➢ Admin and Bot Information
+						body: `〘◉〙𝖠𝖽𝗆𝗂𝗇 𝖺𝗇𝖽 𝖡𝗈𝗍 𝖨𝗇𝖿𝗈𝗋𝗆𝖺𝗍𝗂𝗈𝗇〘◉〙
 
-⁂ Bot Name: ${BOTNAME}
-✧ Bot Admin: ${admin}
-♛ Bot Admin Link: https://www.facebook.com/${admin}
-❂ Bot Prefix: ${prefix}
-✫ Files Owner: ${FILESOWNER}
-➟ UPTIME ${uptimeString}
-✬ Today is: ${juswa} 
+〘◉〙 𝖡𝗈𝗍 𝖭𝖺𝗆𝖾: ${BOTNAME}
+〘◉〙 𝖡𝗈𝗍 𝖠𝖽𝗆𝗂𝗇: ${admin}
+〘◉〙 𝖡𝗈𝗍 𝖠𝖽𝗆𝗂𝗇 𝖫𝗂𝗇𝗄: https://www.facebook.com/${admin}
+〘◉〙 𝖡𝗈𝗍 𝖯𝗋𝖾𝖿𝗂𝗑: ${prefix}
+〘◉〙 𝖥𝗂𝗅𝖾𝗌 𝖮𝗐𝗇𝖾𝗋: ${FILESOWNER}
+〘◉〙 𝖴𝖯𝖳𝖨𝖬𝖤 ${uptimeString}
+〘◉〙 𝖳𝗈𝖽𝖺𝗒 𝗂𝗌: ${juswa} 
 
-➳ Bot is running ${hours}:${minutes}:${seconds}.
-✫ Thanks for using my bot`,
+► 𝖡𝗈𝗍 𝗂𝗌 𝗋𝗎𝗇𝗇𝗂𝗇𝗀 ${hours}:${minutes}:${seconds}.
+► 𝖳𝗁𝖺𝗇𝗄𝗌 𝖿𝗈𝗋 𝗎𝗌𝗂𝗇𝗀 𝗆𝗒 𝖺𝗎𝗍𝗈𝖻𝗈𝗍`,
 						attachment: fs.createReadStream(__dirname + "/cache/owner_video.mp4")
 				}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/owner_video.mp4"));
 		};
