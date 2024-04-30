@@ -1,5 +1,3 @@
-const axios = require('axios');
-
 module.exports.config = {
     name: 'help',
     version: '1.0.0',
