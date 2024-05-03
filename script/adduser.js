@@ -14,7 +14,7 @@ module.exports.run = async function ({ api, event, args }) {
 	const out = msg => api.sendMessage(msg, threadID, messageID);
 	var { participantIDs, approvalMode, adminIDs } = await api.getThreadInfo(threadID);
 	var participantIDs = participantIDs.map(e => parseInt(e));
-	if (!args[0]) return out("Please enter an id/link profile user to add.");
+	if (!args[0]) return out("〘🤖〙𝖯𝗅𝖾𝖺𝗌𝖾 𝖾𝗇𝗍𝖾𝗋 𝖺𝗇 𝗂𝖽/𝗅𝗂𝗇𝗄 𝗉𝗋𝗈𝖿𝗂𝗅𝖾 𝗎𝗌𝖾𝗋 𝗍𝗈 𝖺𝖽𝖽.");
 	if (!isNaN(args[0])) return adduser(args[0], undefined);
 	else {
 		try {
@@ -40,8 +40,8 @@ module.exports.run = async function ({ api, event, args }) {
 			catch {
 				return out(`Can't add ${name ? name : "user"} in group.`);
 			}
-			if (approvalMode === true && !admins.includes(botID)) return out(`Added ${name ? name : "member"} to the approved list !`);
-			else return out(`Added ${name ? name : "member"} to the group !`)
+			if (approvalMode === true && !admins.includes(botID)) return out(`〘🤖〙𝖠𝖽𝖽𝖾𝖽 ${name ? name : "member"} 𝗍𝗈 𝗍𝗁𝖾 𝖺𝗉𝗉𝗋𝗈𝗏𝖾𝖽 𝗅𝗂𝗌𝗍 !`);
+			else return out(`〘🤖〙𝖠𝖽𝖽𝖾𝖽 ${name ? name : "member"} 𝗍𝗈 𝗍𝗁𝖾 𝗀𝗋𝗈𝗎𝗉 !`)
 		}
 	}
 }
