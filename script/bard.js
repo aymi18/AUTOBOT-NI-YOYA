@@ -6,7 +6,7 @@ module.exports.config = {
                 credits: "dipto",
         role: 0,
                 description: "Get a response from gemini AI",
-        hasPrefix: false,
+        hasPrefix: true,
                 usages: "[prompt]",
                 cooldown: 5,
                 aliases: ["gem"]
