@@ -17,7 +17,7 @@ module.exports.run = async ({ api, event, args }) => {
 	api.setMessageReaction("📝", event.messageID, () => { }, true);
 
 		if (!prompt) {
-				return api.sendMessage("Hello there, how can I assist you today?", event.threadID, event.messageID);
+				return api.sendMessage("〘🤖〙Hello there, how can I assist you today?", event.threadID, event.messageID);
 		}
 
 		try {
@@ -28,6 +28,6 @@ module.exports.run = async ({ api, event, args }) => {
 				api.sendMessage(`${di}`, event.threadID, event.messageID);
 		} catch (error) {
 				console.error('ERROR', error.response?.data || error.message);
-				api.sendMessage('An error occurred while processing the command.', event.threadID);
+				api.sendMessage('〘🤖〙An error occurred while processing the command.', event.threadID);
 		}
 };
