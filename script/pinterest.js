@@ -17,7 +17,7 @@ module.exports.run = async function({ api, event, args }) {
     if(keySearch.includes("-") == false) return api.sendMessage('Please enter in the format, example: pinterest Coco Martin - 10 (20 limit only)', event.threadID, event.messageID)
     const keySearchs = keySearch.substr(0, keySearch.indexOf('-'))
     const numberSearch = keySearch.split("-").pop() || 6
-    const res = await axios.get(`https://celestial-dainsleif-v2.onrender.com/pinterest?pinte=${encodeURIComponent(keySearchs)}`);
+    const res = await axios.get(`https://gpt4withcustommodel.onrender.com/api/pin?title=${encodeURIComponent(keySearchs)}&count=20`);
     const data = res.data.data;
     var num = 0;
     var imgData = [];
@@ -29,7 +29,7 @@ module.exports.run = async function({ api, event, args }) {
     }
     api.sendMessage({
         attachment: imgData,
-        body: numberSearch + 'Search results for keyword: '+ keySearchs
+        body: numberSearch + '〘💭〙𝗁𝖾𝗅𝗅𝗈! 𝗍𝗁𝖾𝗌𝖾 𝖺𝗋𝖾 𝗍𝗁𝖾 𝗋𝖾𝗌𝗎𝗅𝗍𝗌 𝖿𝗈𝗋 : '+ keySearchs
     }, event.threadID, event.messageID)
     for (let ii = 1; ii < parseInt(numberSearch); ii++) {
         fs.unlinkSync(__dirname + `/cache/${ii}.jpg`)
