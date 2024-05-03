@@ -7,7 +7,7 @@ module.exports.config = {
  aliases: ["gojo"],
  credits: "cliff",
  cooldown: 0,
-	hasPrefix: false,
+	hasPrefix: true,
 	usage: "",
 };
 
