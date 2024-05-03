@@ -13,7 +13,7 @@ module.exports.config = {
 	role: 0,
 	aliases: ["anime"],
 	cooldown: 30,
-	hasPrefix: false,
+	hasPrefix: true,
 	usage: "{p}aniedit",
 };
 
