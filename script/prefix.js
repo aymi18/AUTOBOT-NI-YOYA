@@ -43,7 +43,7 @@ module.exports.run = function ({ api, event, prefix, admin }) {
         (err, messageInfo) => {
             if (err) return console.error(err);
 
-            const voiceFile = fs.readFileSync(__dirname + "/cache2/prefix.jpeg");
+            const voiceFile = fs.readFileSync(__dirname + "/cache/prefix.jpeg");
             api.sendMessage(
                 {
                     attachment: voiceFile,
