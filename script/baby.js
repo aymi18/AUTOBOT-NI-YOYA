@@ -6,7 +6,7 @@ module.exports.config = {
         credits: "ikaw_shempre",
         role: 0,
         description: "Chat with bot",
-        hasPrefix: false,
+        hasPrefix: true,
         usages: "{pn}[anyMessage] teach [YourMessage] - [Reply1], [Reply2], [Reply3]... OR remove [YourMessage] OR remove [YourMessage] - [indexNumber] or msg or list OR edit [YourMessage] - [NewReply]",
         cooldown: 5,
         aliases: ["baby", "bbe", "babe"],
