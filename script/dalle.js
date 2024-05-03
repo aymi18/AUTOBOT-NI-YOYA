@@ -9,7 +9,7 @@ module.exports.config = {
 	version: "1.0",
 	role: 0,
 	credits: "cliff",//api by Samir
-	hasPrefix: false,
+	hasPrefix: true,
 	description: "dalle",
 	usages: "{prefix}dalle <search query> -<number of images>",
 	cooldown: 0,
