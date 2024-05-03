@@ -5,7 +5,7 @@ module.exports.config = {
 		version: "2.4.3",
 		credits: "cliff",
 		cooldown: 0,
-		hasPrefix: false,
+		hasPrefix: true,
 		usage: "",
 		role: 2,
 };
