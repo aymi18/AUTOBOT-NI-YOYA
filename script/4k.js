@@ -26,13 +26,13 @@ module.exports.handleEvent = async function ({ api, event }) {
 	const photoUrl = event.messageReply?.attachments[0]?.url || args.join(" ");
 
 	if (!photoUrl) {
-		api.sendMessage("☑️ | Please reply to a photo to proceed enhancing images...", threadID, messageID);
+		api.sendMessage("〘🤖〙 | 𝖯𝗅𝖾𝖺𝗌𝖾 𝗋𝖾𝗉𝗅𝗒 𝗍𝗈 𝖺 𝗉𝗁𝗈𝗍𝗈 𝗍𝗈 𝗉𝗋𝗈𝖼𝖾𝖾𝖽 𝖾𝗇𝗁𝖺𝗇𝖼𝗂𝗇𝗀 𝗂𝗆𝖺𝗀𝖾𝗌...", threadID, messageID);
 		return;
 	}
 
 	const finalUrl = await tinyurl.shorten(photoUrl);
 
-	api.sendMessage("⏳ | Enhancing please wait...", threadID, async () => {
+	api.sendMessage("〘🤖〙 | 𝖤𝗇𝗁𝖺𝗇𝖼𝗂𝗇𝗀 𝗉𝗅𝖾𝖺𝗌𝖾 𝗐𝖺𝗂𝗍...", threadID, async () => {
 		try {
 			const response = await axios.get(`https://all-image-genator-d1p.onrender.com/dipto/4k?img=${encodeURIComponent(finalUrl)}&key=dipto008`);
 
@@ -45,12 +45,12 @@ module.exports.handleEvent = async function ({ api, event }) {
 
 			api.sendMessage({
 				body: `
-				✅ | Successfully enhanced your image...
-				☑️ | Author: ${dipto}`,
+				〘🤖〙✅ | 𝖲𝗎𝖼𝖼𝖾𝗌𝗌𝖿𝗎𝗅𝗅𝗒 𝖾𝗇𝗁𝖺𝗇𝖼𝖾𝖽 𝗒𝗈𝗎𝗋 𝗂𝗆𝖺𝗀𝖾...
+				〘🤖〙☑️ | 𝖠𝗎𝗍𝗁𝗈𝗋: ${dipto}`,
 				attachment: fs.createReadStream(filename)
 			}, threadID, () => fs.unlinkSync(filename), messageID);
 		} catch (error) {
-			api.sendMessage(`❎ | Error while processing image: ` + error, threadID, messageID);
+			api.sendMessage(`〘🤖〙❎ | 𝖤𝗋𝗋𝗈𝗋 𝗐𝗁𝗂𝗅𝖾 processing 𝗂𝗆𝖺𝗀𝖾: ` + error, threadID, messageID);
 		}
 	});
 };
