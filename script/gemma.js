@@ -15,12 +15,12 @@ module.exports.config = {
 module.exports.run = async function ({ api, event, args }) {
                 const content = encodeURIComponent(args.join(" "));
 
-                if (!content) return api.sendMessage("Please provide your question.\n\nExample: ai what is the solar system?", event.threadID, event.messageID);
+                if (!content) return api.sendMessage("〘🤖〙Please provide your question.\n\nExample: gemma what is the solar system?", event.threadID, event.messageID);
 
                 const apiUrl = `https://haze-ai-models-8d44a842ac90.herokuapp.com/gemma?content=${content}&key=CutieHazeyy`;
 
                 try {
-                                api.sendMessage("🔍 | gemma is searching for your answer. Please wait...", event.threadID, event.messageID);
+                                api.sendMessage("〘🤖〙 | gemma is searching for your answer. Please wait...", event.threadID, event.messageID);
 
                                 const response = await axios.get(apiUrl);
                                 const { data } = response;
