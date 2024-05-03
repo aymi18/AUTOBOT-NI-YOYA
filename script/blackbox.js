@@ -4,7 +4,7 @@ module.exports.config = {
 	name: "blackbox",
 	version: "9",
 	role: 0,
-	hasPrefix: false,
+	hasPrefix: true,
 	credits: "Eugene Aguilar",
 	description: "AI powered by blackbox",
 	aliases: ["black"],
