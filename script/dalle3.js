@@ -10,7 +10,7 @@ module.exports.config = {
 		cooldown: 15,
 		role: 0,
 		description: "Generate images by Dalle3",
-		hasPrefix: false,
+		hasPrefix: true,
 };
 
 module.exports.run = async function ({ api, message, args }) {
