@@ -26,7 +26,7 @@ module.exports.run = async ({ event, api, args }) => {
  let msg = "";
  let idBox = (args[0]) ? args[0] : threadID;
  if (args[0] == "list") {
-	 msg = "LIST OF APPROVED BOXES! ";
+	 msg = "〘🤖〙𝗟𝗜𝗦𝗧 𝗢𝗙 𝗔𝗣𝗣𝗥𝗢𝗩𝗘𝗗 𝗕𝗢𝗫𝗘𝗦! ";
 	 let count = 0;
 	 for (e of data) {
 		 msg += `\n${count += 1}. ID: ${e}`;
@@ -45,7 +45,7 @@ module.exports.run = async ({ event, api, args }) => {
 	 }, messageID)
  }
  else if (args[0] == "pending") {
-	 msg = "LIST OF BOXES WAITING FOR APPROVAL!";
+	 msg = "〘🤖〙𝗟𝗜𝗦𝗧 𝗢𝗙 𝗕𝗢𝗫𝗘𝗦 𝗪𝗔𝗜𝗧𝗜𝗡𝗚 𝗙𝗢𝗥 𝗔𝗣𝗣𝗥𝗢𝗩𝗔𝗟!";
 	 let count = 0;
 	 for (e of pending) {
 		 let name = (await api.getThreadInfo(e)).name || "Group Chat";
@@ -55,14 +55,14 @@ module.exports.run = async ({ event, api, args }) => {
  }
  else if (isNaN(parseInt(idBox))) api.sendMessage("Id you entered is invalid ", threadID, messageID);
  else if (data.includes(idBox)) api.sendMessage(`Thread Box ID ${idBox} has been approved in advance! `, threadID, messageID);
- else api.sendMessage("» ⚠️Box has been approved by admin.\nUse help to see more commands☑", idBox, (error, info) => {
+ else api.sendMessage("» 〘🤖〙⚠️Box has been approved by admin.\nUse help to see more commands☑", idBox, (error, info) => {
 	 if (error) return api.sendMessage("An error has occurred, making sure that the ID you entered is valid and the bot is in the box! ", threadID, messageID);
 	 else {
 		 data.push(idBox);
 		 pending.splice(pending.indexOf(idBox), 1);
 		 fs.writeFileSync(dataPath, JSON.stringify(data, null, 2));
 		 fs.writeFileSync(pendingPath, JSON.stringify(pending, null, 2));
-		 api.sendMessage(`» ✅Successful Box/Thread Approval:\n${idBox}\nEnjoy Using The Bot☑`, threadID, messageID);
+		 api.sendMessage(`» 〘🤖〙✅Successful Box/Thread Approval:\n${idBox}\nEnjoy Using The Bot☑`, threadID, messageID);
 	 }
  });
 				}
