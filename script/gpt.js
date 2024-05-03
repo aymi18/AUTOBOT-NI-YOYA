@@ -19,12 +19,12 @@ module.exports.run = async function ({ api, event, args }) {
 
   const url = "https://hercai.onrender.com/v3/hercai";
 
-  if (!question) return sendMessage("Please provide a question.");
+  if (!question) return sendMessage("〘💭〙𝖯𝗅𝖾𝖺𝗌𝖾 𝗉𝗋𝗈𝗏𝗂𝖽𝖾 𝖺 𝗊𝗎𝖾𝗌𝗍𝗂𝗈𝗇...");
 
   try {
     const response = await get(`${url}?question=${encodeURIComponent(question)}`);
     sendMessage(response.data.reply);
   } catch (error) {
-    sendMessage("An error occurred: " + error.message);
+    sendMessage("〘🤖〙𝖠𝗇 𝖾𝗋𝗋𝗈𝗋 𝗈𝖼𝖼𝗎𝗋𝗋𝖾𝖽: " + error.message);
   }
 };
