@@ -4,7 +4,7 @@ module.exports.config = {
     hasPermssion: 0,
     credits: "Deku",
     description: "auto restart every hour",
-  usePrefix: true,
+  usePrefix: false,
     commandCategory: "System",
     cooldowns: 0
 }
