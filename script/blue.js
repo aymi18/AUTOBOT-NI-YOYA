@@ -6,7 +6,7 @@ module.exports.config = {
         role: 0,
         credits: "Jonell Magallanes",
         description: "cmd ai powered by blue",
-        hasPrefix: false,
+        hasPrefix: true,
         usage:"blue [your content]",
         cooldown: 5,
 };
