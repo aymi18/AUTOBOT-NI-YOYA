@@ -29,7 +29,7 @@ module.exports.run = function ({ api, event, prefix, admin }) {
         // Send text message with prefix information
         api.sendMessage(
                 {
-                        body: `█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█\n█░░    ▄▀█ █░█ ▀█▀ █▀█     ░░█\n█░░    █▀█ █▄█ ░█░ █▄█     ░░█\n█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n\n〘🤖〙𝗛𝗘𝗟𝗟𝗢! 𝗧𝗛𝗜𝗦 𝗜𝗦 𝗠𝗬 𝗣𝗥𝗘𝗙𝗜𝗫 :  》${prefix}\n〘🤖〙𝗧𝗬𝗣𝗘 :\n➥ ${prefix}help  -> see commands\n〘🤖〙𝗕𝗢𝗧 𝗔𝗗𝗠𝗜𝗡: https://www.facebook.com/${admin}`,
+                        body: `█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█\n█░░    ▄▀█ █░█ ▀█▀ █▀█     ░░█\n█░░    █▀█ █▄█ ░█░ █▄█     ░░█\n█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n\n〘🤖〙𝗛𝗘𝗟𝗟𝗢! 𝗧𝗛𝗜𝗦 𝗜𝗦 𝗠𝗬 𝗣𝗥𝗘𝗙𝗜𝗫 :  》${prefix}《\n〘🤖〙𝗧𝗬𝗣𝗘 :\n ${prefix}𝗁𝖾𝗅𝗉 ▶︎ see commands\n〘🤖〙𝗕𝗢𝗧 𝗔𝗗𝗠𝗜𝗡: https://www.facebook.com/${admin}/n〘𝘆𝗼𝘆𝗮💭〙 : 𝗰𝗿𝗲𝗮𝘁𝗲 𝗸𝗮 𝗼𝘄𝗻 𝗮𝘂𝘁𝗼𝗯𝗼𝘁 𝗺𝗼 𝗱𝗶𝘁𝗼 𝗯𝗵𝗲 : `,
                        
                 },
                 threadID,
