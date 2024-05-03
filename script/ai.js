@@ -27,6 +27,6 @@ module.exports.run = async function({ api, event, args }) {
     let response = data.response;
     api.sendMessage(response, event.threadID, event.messageID);
   } catch (error) {
-    api.sendMessage('An error occurred while processing your request.', event.threadID, event.messageID);
+    api.sendMessage(〘⚠️〙𝖠𝗇 𝖾𝗋𝗋𝗈𝗋 𝗈𝖼𝖼𝗎𝗋𝗋𝖾𝖽 𝗐𝗁𝗂𝗅𝖾 𝗉𝗋𝗈𝖼𝖾𝗌𝗌𝗂𝗇𝗀 your 𝗋𝖾𝗊𝗎𝖾𝗌𝗍...', event.threadID, event.messageID);
   }
 };
